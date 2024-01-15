@@ -8,7 +8,7 @@
     <meta charset="utf-8">
 
     <!-- External CSS libraries -->
-	<!-- Log on to codeastro.com for more projects -->
+	 
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %} ">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-submenu.css' %}">
@@ -27,15 +27,16 @@
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static 'css/skins/red.css' %}">
+    
 
     <!-- Favicon icon -->
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" >
 
     <!-- Google fonts -->
-	<!-- Log on to codeastro.com for more projects -->
+	 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
 
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-LC+UKK/DdUHd2LqQ5M8CWpp5cTA+tSz9X4vA9FpBJe+au0v0p+SSxFGsv3v1NPxL5dt+nWw9LLACo1i4qNIMUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/ie10-viewport-bug-workaround.css' %}">
@@ -49,6 +50,12 @@
 
 {% include 'includes/navbar.html' %}
 
+<div style="position: absolute; margin-left: -43px; margin-top: 20px; z-index: 10; ">
+    <button
+        style="transform: rotate(90deg); padding: 4px 4px; background-color: red; color: #fff; font-weight: bold; border-radius: 5%; border-width: 1px; cursor: pointer; border-color: #fff;"
+        data-toggle="modal" data-target="#exampleModal">Search
+        <i class="fa fa-search"></i></button>
+</div>
 
 
 {% block content %}
@@ -58,12 +65,12 @@
 
 <!-- Full Page Search -->
 <div id="full-page-search">
-    <button type="button" class="close">×</button>
+    <button type="button" class="close" class="fa fa-close" style="background-color: rgba(204, 24, 24, 0.849); color: beige;">X</button>
     <form action="{% url 'search' %}" class="search-header">
-        <input type="search" value="" placeholder="type keyword(s) here. Eg: audi, benz etc" name='keyword' />
+        <input type="search" value="" placeholder="type keyword(s) here. Eg: prado, benz etc" name='keyword' />
         <button type="submit" class="btn btn-sm button-theme">Search</button>
     </form>
-	<!-- Log on to codeastro.com for more projects -->
+	 
 </div>
 
 {% include 'includes/footer.html' %}

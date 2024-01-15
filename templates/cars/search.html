@@ -5,7 +5,7 @@
 {% block content %}
 {% load humanize %}
 <!-- Banner start -->
-<!-- Log on to codeastro.com for more projects -->
+ 
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
@@ -18,7 +18,7 @@
     </div>
 </div>
 <!-- Banner end -->
-<!-- Log on to codeastro.com for more projects -->
+ 
 <!-- Search box 3 start -->
 <div class="search-box-3 sb-7 bg-active">
     <div class="container">
@@ -54,7 +54,7 @@
                                       <option value="{{year}}">{{year}}</option>
                                     {% endfor %}
                                 </select>
-								<!-- Log on to codeastro.com for more projects -->
+								 
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                         </div>
-						<!-- Log on to codeastro.com for more projects -->
+						 
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <button class="btn btn-block button-theme btn-md">
@@ -122,13 +122,13 @@
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
-                                        <span><i class="flaticon-way"></i></span>{{car.miles | intcomma}} miles
+                                        <span><i class="flaticon-way"></i></span>{{car.milage | intcomma}} kms
                                     </li>
                                     <li>
                                         <span><i class="flaticon-calendar-1"></i></span>{{car.year}}
                                     </li>
                                     <li>
-									<!-- Log on to codeastro.com for more projects -->
+									 
                                         <span><i class="flaticon-manual-transmission"></i></span>{{car.transmission}}
                                     </li>
                                 </ul>
@@ -173,7 +173,7 @@
                         </h1>
                         <div class="location">
                             <a href="{% url 'car_detail' car.id %}">
-                                <i class="flaticon-pin"></i>{{car.state}}, {{car.city}}
+                                <i class="flaticon-pin"></i>{{car.county}}, {{car.city}}
                             </a>
                         </div>
                     </div>
@@ -182,11 +182,11 @@
                             <p class="cartype">{{car.body_style}}</p>
                         </div>
                         <div class="pull-right">
-                            <p class="price">$ {{car.price | intcomma}}</p>
+                            <p class="price">Ksh. {{car.price | intcomma}}</p>
                         </div>
                     </div>
                 </div>
-				<!-- Log on to codeastro.com for more projects -->
+				 
             </div>
           {% endfor %}
         </div>

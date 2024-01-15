@@ -5,7 +5,7 @@
 
 {% load static %}
 {% load humanize %}
-<!-- Log on to codeastro.com for more projects -->
+ 
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
@@ -32,7 +32,7 @@
                         <div class="pull-left">
                             <h3>{{single_car.car_title}}</h3>
                             <h6>
-                                <i class="flaticon-pin"></i>{{single_car.state}}, {{single_car.city}}
+                                <i class="flaticon-pin"></i>{{single_car.county}}, {{single_car.city}}
                             </h6>
                         </div>
                         <div class="pull-right">
@@ -65,7 +65,7 @@
                                 <img src="{{single_car.car_photo_4.url}}" class="img-fluid" alt="slider-car">
                             </div>
                             {% endif %}
-                        </div><!-- Log on to codeastro.com for more projects -->
+                        </div> 
                         <!-- main slider carousel nav controls -->
                         <div class="carousel-indicators-section clearfix">
                             <ul class="carousel-indicators car-properties list-inline nav nav-justified">
@@ -105,7 +105,7 @@
                             </ul>
                         </div>
                     </div>
-					<!-- Log on to codeastro.com for more projects -->
+					 
                     <!-- Tabbing box start -->
                     <div class="tabbing tabbing-box mb-40">
                         <ul class="nav nav-tabs" id="carTab" role="tablist">
@@ -148,18 +148,41 @@
                         </div>
                     </div>
 
-					
+					 
                 </div>
             </div>
+            
             <div class="col-lg-4 col-md-12">
                 <div class="sidebar-right">
                     <!-- Advanced search start -->
                     <div class="widget advanced-search d-none-992">
-                        <button class="btn btn-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send a Message</button>
-
+                        
+                        
+                            <div class="container" class="connect-section" class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6">
+                                <h2 class="mb-3 text-base font-semibold text-gray-900 md:text-xl ">
+                                    Connect with us
+                                </h2>
+                                <ul class="my-4 space-y-3">
+                                    <li>
+                                      <a href="https://wa.me/+254713257066?text=I'm%20interested%20in%20the%20car%20I%20viewed%20on%20your%20website." target="_blank"
+                                        style="display: flex; align-items: center; padding: 10px; font-weight: bold; color: black; background-color: #f0f0f0; border: 2px solid #25D366; border-radius: 5px; box-shadow: 0px 0px 5px #25D366; transition: background-color 0.3s ease-in-out;">
+                                        <i class="fa-brands fa-whatsapp h4 text-green-500"></i>
+                                        <span style="margin-left: 10px; white-space: nowrap; color: #25D366;">Via Whatsapp</span>
+                                        <span style="margin-left: 10px; display: inline-flex; align-items: right; justify-content: right; padding: 5px; font-size: 12px; font-weight: bold; color: white; background-color: #25D366; border-radius: 5px;">Popular</span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="tel:+254713257066"
+                                        style="display: flex; align-items: center; padding: 10px; font-weight: bold; color: black; background-color: #f0f0f0; border: 2px solid #FF5858; border-radius: 5px; box-shadow: 0px 0px 5px #FF5858; transition: background-color 0.3s ease-in-out;">
+                                        <i class="fa-solid fa-phone h-4 text-red-500"></i>
+                                        <span style="margin-left: 10px; white-space: nowrap; color: #FF5858;">Call us now</span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                          </div>
 
                         <br>
-                        <h3 class="sidebar-title">Car Specs</h3>
+                        <div><h3 class="sidebar-title">Car Specs</h3>
                         <ul>
                             <li>
                                 <span><b>Color:</b> </span>{{single_car.color}}
@@ -186,19 +209,13 @@
                                 <span><b>Interior:</b> </span>{{single_car.interior}}
                             </li>
                             <li>
-                                <span><b>Miles:</b> </span>{{single_car.miles | intcomma}} miles
-                            </li>
-                            <li>
                                 <span><b>Doors:</b> </span>{{single_car.doors}}
                             </li>
                             <li>
                                 <span><b>Passengers:</b> </span>{{single_car.passengers}}
                             </li>
                             <li>
-                                <span><b>VID No.:</b> </span>{{single_car.vin_no}}
-                            </li>
-                            <li>
-                                <span><b>Mileage:</b> </span>{{single_car.milage}}
+                                <span><b>Mileage:</b> </span>{{single_car.milage | intcomma}} Kms
                             </li>
 
                             <li>
@@ -208,7 +225,11 @@
                                 <span><b>Owners:</b> </span>{{single_car.no_of_owners}}
                             </li>
                         </ul>
+                        </div>
                     </div>
+
+                    <!-- Whatsapp icon -->
+                    
 
                     <!-- Inquiry Modal -->
                     <div class="modal fade" id="inquiryModal" role="dialog">
@@ -256,7 +277,7 @@
                                         <option value="Others [Mention Below]">Others [Mention Below]</option>
                                       </select>
                                     </div>
-									
+									 
                                 <div class="form-group">
                                   <input type="text" name="car_title" class="form-control" value="{{ single_car.car_title }}" readonly>
                                 </div>
@@ -300,26 +321,26 @@
                     </div>
                     <!-- Question start -->
                     <div class="widget question">
-                        <h5 class="sidebar-title">Got Any Question?</h5>
+                        <h5 style="padding: 10px;">Got any Questions?</h5>
+                            <button class="btn btn-danger bomd btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Send a Message</button>
+                        <br>
                         <ul class="contact-info">
                             <li>
-                                <i class="flaticon-pin"></i>47 Clement Street, Atlanta
+                                <i class="flaticon-pin"></i>Karen, Bomas - Galleria
                             </li>
                             <li>
-                                <i class="flaticon-mail"></i><a href="mailto:info@carweb.cm">info@carweb.cm</a>
+                                <i class="flaticon-mail"></i><a href="mailto:info@galleriamotors.com">info@galleriamotors.com</a>
                             </li>
                             <li>
-                                <i class="flaticon-phone"></i><a href="tel:+0477-85x6-552">+0477 1506 525</a>
+                                <i class="flaticon-phone"></i><a href="tel:+254713257066">+254713257066</a>
                             </li>
                         </ul>
                         <div class="social-list clearfix">
                             <ul>
-                                <li><a href="https://codeastro.com/" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="https://codeastro.com/" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://codeastro.com/" class="instagram-bg"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="https://codeastro.com/" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="https://codeastro.com/" class="rss-bg"><i class="fa fa-rss"></i></a></li>
-                                <li><a href="https://codeastro.com/" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter-bg"><i class="fa fa-times"></i></a></li>
+                                <li><a href="#" class="instagram-bg"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" class="tiktok-bg"><i class="fab fa-tiktok"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -328,6 +349,6 @@
             </div>
         </div>
     </div>
-</div><!-- Log on to codeastro.com for more projects -->
+</div> 
 <!-- Properties details page end -->
 {% endblock %}

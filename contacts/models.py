@@ -3,6 +3,7 @@ from datetime import datetime
 
 # Create your models here.
 class Contact(models.Model):
+    id = models.BigAutoField(primary_key=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     car_id = models.IntegerField()
